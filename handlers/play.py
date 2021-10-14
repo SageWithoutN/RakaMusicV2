@@ -434,7 +434,7 @@ async def m_cb(b, cb):
             )
 
 
-@Client.on_message(command(["play", f"play@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["play", f"play@{BOT_USERNAME}", "p"]) & other_filters)
 async def play(_, message: Message):
     global que
     global useer
@@ -522,13 +522,17 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
+                    InlineKeyboardButton("⏹", "leave"),
+                    InlineKeyboardButton("⏸", "puse"),
+                    InlineKeyboardButton("▶️", "resume"),
+                    InlineKeyboardButton("⏭", "skip"),
+                ],
+                [
+                    InlineKeyboardButton("🖱 ᴘʟᴀʏʟɪsᴛ", callback_data="playlist"),
+                    InlineKeyboardButton("📡 ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATES_CHANNEL}"),
+                ],
+                [
                     InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
-                ],[
-                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"),
-                    InlineKeyboardButton("✨ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"),
-                ],[
-                    InlineKeyboardButton("👑 Owner", url=f"https://t.me/{OWNER_NAME}"),
                 ],
             ]
         )
@@ -569,13 +573,17 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
+                    InlineKeyboardButton("⏹", "leave"),
+                    InlineKeyboardButton("⏸", "puse"),
+                    InlineKeyboardButton("▶️", "resume"),
+                    InlineKeyboardButton("⏭", "skip"),
+                ],
+                [
+                    InlineKeyboardButton("🖱 ᴘʟᴀʏʟɪsᴛ", callback_data="playlist"),
+                    InlineKeyboardButton("📡 ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATES_CHANNEL}"),
+                ],
+                [
                     InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
-                ],[
-                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"),
-                    InlineKeyboardButton("✨ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"),
-                ],[
-                    InlineKeyboardButton("👑 Owner", url=f"https://t.me/{OWNER_NAME}"),
                 ],
             ]
         )
@@ -631,7 +639,7 @@ async def play(_, message: Message):
                 ]
             )
             await message.reply_photo(
-                photo=f"{THUMB_IMG}", caption=toxxt, reply_markup=keyboard
+                photo=f"https://telegra.ph/file/f988ac40efcee2242d95c.jpg", caption=toxxt, reply_markup=keyboard
             )
 
             await lel.delete()
@@ -660,16 +668,20 @@ async def play(_, message: Message):
                 return
             keyboard = InlineKeyboardMarkup(
                 [
-                    [
-                        InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
-                        InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
-                    ],[
-                        InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"),
-                        InlineKeyboardButton("✨ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"),
-                    ],[
-                        InlineKeyboardButton("👑 Owner", url=f"https://t.me/{OWNER_NAME}"),
-                    ],
-                ]
+                [
+                    InlineKeyboardButton("⏹", "leave"),
+                    InlineKeyboardButton("⏸", "puse"),
+                    InlineKeyboardButton("▶️", "resume"),
+                    InlineKeyboardButton("⏭", "skip"),
+                ],
+                [
+                    InlineKeyboardButton("🖱 ᴘʟᴀʏʟɪsᴛ", callback_data="playlist"),
+                    InlineKeyboardButton("📡 ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATES_CHANNEL}"),
+                ],
+                [
+                    InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
+                ],
+            ]
             )
             message.from_user.first_name
             await generate_cover(title, thumbnail)
@@ -765,16 +777,20 @@ async def lol_cb(b, cb):
         return
     keyboard = InlineKeyboardMarkup(
         [
-            [
-                InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
-                InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
-            ],[
-                InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"),
-                InlineKeyboardButton("✨ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"),
-            ],[
-                InlineKeyboardButton("👑 Owner", url=f"https://t.me/{OWNER_NAME}"),
-            ],
-        ]
+                [
+                    InlineKeyboardButton("⏹", "leave"),
+                    InlineKeyboardButton("⏸", "puse"),
+                    InlineKeyboardButton("▶️", "resume"),
+                    InlineKeyboardButton("⏭", "skip"),
+                ],
+                [
+                    InlineKeyboardButton("🖱 ᴘʟᴀʏʟɪsᴛ", callback_data="playlist"),
+                    InlineKeyboardButton("📡 ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATES_CHANNEL}"),
+                ],
+                [
+                    InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
+                ],
+            ]
     )
     await generate_cover(title, thumbnail)
     file_path = await converter.convert(youtube.download(url))
@@ -921,16 +937,20 @@ async def ytplay(_, message: Message):
         pass
     keyboard = InlineKeyboardMarkup(
         [
-            [
-                InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
-                InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
-            ],[
-                InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"),
-                InlineKeyboardButton("✨ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"),
-            ],[
-                InlineKeyboardButton("👑 Owner", url=f"https://t.me/{OWNER_NAME}"),
-            ],
-        ]
+                [
+                    InlineKeyboardButton("⏹", "leave"),
+                    InlineKeyboardButton("⏸", "puse"),
+                    InlineKeyboardButton("▶️", "resume"),
+                    InlineKeyboardButton("⏭", "skip"),
+                ],
+                [
+                    InlineKeyboardButton("🖱 ᴘʟᴀʏʟɪsᴛ", callback_data="playlist"),
+                    InlineKeyboardButton("📡 ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATES_CHANNEL}"),
+                ],
+                [
+                    InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
+                ],
+            ]
     )
     message.from_user.first_name
     await generate_cover(title, thumbnail)
