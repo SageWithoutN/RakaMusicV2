@@ -1,9 +1,9 @@
 {
-    "name": "Virtual Music Bot",
+    "name": "Raka Music Bot",
     "logo": "https://telegra.ph/file/8e36fa003cfbb75aa3883.jpg",
-    "description": "virtual music allow you to stream music trought the telegram voice chat feature.",
+    "description": "Raka music allow you to stream music trought the telegram voice chat feature.",
     "keywords": ["music", "voice chat", "telegram"],
-    "repository": "https://github.com/Tonic990/VirtualMusik",
+    "repository": "https://github.com/SageWithoutN/RakaMusicV2",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
@@ -52,7 +52,7 @@
         "OWNER_NAME": {
             "description": "fill with your username without @",
             "required": false,
-            "value": "Bukan_guudlooking"
+            "value": "rakaaanjayy"
         },
         "API_ID": {
             "description": "your Api ID from my.telegram.org/apps",
@@ -74,12 +74,12 @@
         "UPDATES_CHANNEL": {
             "description": "if you have channel fill the channel username here without @",
             "required": false,
-            "value": "VirtualMusicChannel"
+            "value": "aboutraks"
         },
         "GROUP_SUPPORT": {
             "description": "if you have group fill the group username here without @",
             "required": false,
-            "value": "GroupVirtualMusic"
+            "value": ""
         }
     },
     "buildpacks": [
