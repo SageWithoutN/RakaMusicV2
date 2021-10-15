@@ -36,11 +36,21 @@ async def alive(client: Client, message: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/cfd64e1033266c559e9ef.jpg",
+        photo=f"https://telegra.ph/file/d7c6fc0386508fc543060.jpg",
         caption=f"""🔵 Hallo Ini Adalah pembuat saya yang tamvan
-🔵 tolong chat dia ya
+
+🔵 Tentang Raka
+
+     • nama: raka
+     • umur : 18
+     • tinggi: 172
+     • bb : 58
+     • penyakit bawaan : phobia wanita
+
 🔵 Mau akunnya? nih [klick disini](https://t.me/rakaaanjayy)
-🔵 Powered By : [Do'a Ibu](https://xxnx.com)
+
+🔵 Powered By : [Do'a Ibu](https://xhamster.com)
+
 🔵 waktu hidup raka tinggal : {uptime}
 Thanks For Using Me ♡""",
         reply_markup=InlineKeyboardMarkup(
@@ -56,3 +66,4 @@ Thanks For Using Me ♡""",
             ]
         )
     )
+
