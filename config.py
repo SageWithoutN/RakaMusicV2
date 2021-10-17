@@ -33,7 +33,7 @@ DATABASE_URL = os.environ.get("DATABASE_URL")  # fill with your mongodb url
 LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL"))
 # just fill with True or False (optional)
 BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", "False"))
-DURATION_LIMIT = int(getenv("DURATION_LIMIT", "60"))
+DURATION_LIMIT = int(getenv("DURATION_LIMIT", "120"))
 COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ ! .").split())
 SUDO_USERS = list(map(int, getenv("SUDO_USERS").split()))
 # UPDATER CONFIG
